@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Contact JAZ Supermarket for enquiries, feedback and customer support.">
+
+    <title>Contact Us | JAZ Supermarket</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         WEBSITE HEADER
+    ========================== -->
+
+    <header class="site-header">
+<p>ZAWEDDE AGNES JOVIA</p>
+        <h1>JAZ SUPERMARKET</h1>
+
+        <img
+            src="logo.png"
+            alt="JAZ Supermarket Logo"
+            class="logo"
+        >
+
+        <nav class="navigation">
+            <a href="Home.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Products.html">Products</a>
+            <a href="Contact.html">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         CONTACT PAGE CONTENT
+    ========================== -->
+
+    <main class="contact-page">
+
+        <!-- INTRODUCTION -->
+
+        <section class="contact-intro">
+
+            <h2>Contact Us</h2>
+
+            <p>
+                We would love to hear from you!
+                Whether you have a question, suggestion,
+                enquiry or feedback, JAZ Supermarket is
+                always happy to hear from our customers.
+            </p>
+
+        </section>
+
+
+        <!-- CONTACT FORM -->
+
+        <section class="contact-form-section">
+
+            <h2>Send Us Your Feedback</h2>
+
+            <p>
+                Fill in the form below to share your
+                comments or enquiries with us.
+            </p>
+
+            <form id="feedbackForm">
+
+                <div class="form-group">
+
+                    <label for="customerName">
+                        Your Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="customerName"
+                        name="customerName"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="customerEmail">
+                        Your Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="customerEmail"
+                        name="customerEmail"
+                        placeholder="Enter your email address"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="feedback">
+                        Your Feedback or Message
+                    </label>
+
+                    <textarea
+                        id="feedback"
+                        name="feedback"
+                        rows="6"
+                        placeholder="Write your feedback or enquiry here..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button type="submit" class="submit-button">
+                    Send Feedback via WhatsApp
+                </button>
+
+            </form>
+
+            <p class="form-note">
+                Your message will be prepared in WhatsApp
+                for you to review and send.
+            </p>
+
+        </section>
+
+
+        <!-- WORKING HOURS -->
+
+        <section class="working-hours">
+
+            <h2>Our Working Hours</h2>
+
+            <div class="hours-list">
+
+                <p>
+                    <strong>Monday - Friday:</strong>
+                    7:00 AM - 11:00 PM
+                </p>
+
+                <p>
+                    <strong>Saturday - Sunday:</strong>
+                    8:00 AM - 10:00 PM
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- TELEPHONE CONTACT -->
+
+        <section class="telephone-section">
+
+            <h2>Call Us</h2>
+
+            <p>
+                You can reach JAZ Supermarket using
+                any of the following telephone numbers:
+            </p>
+
+            <p>
+                <strong>Telephone 1:</strong>
+                <a href="tel:+256705807527">
+                    +256 705 807 527
+                </a>
+            </p>
+
+            <p>
+                <strong>Telephone 2:</strong>
+                <a href="tel:+256757345820">
+                    +256 757 345 820
+                </a>
+            </p>
+
+        </section>
+
+
+        <!-- WHATSAPP CONTACT -->
+
+        <section class="whatsapp-section">
+
+            <h2>Connect With Us on WhatsApp</h2>
+
+            <p>
+                For more information, enquiries or quick
+                communication, contact us directly on WhatsApp.
+            </p>
+
+            <a
+                href="https://wa.me/256705807527"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="whatsapp-button"
+            >
+                Chat With Us on WhatsApp
+            </a>
+
+        </section>
+
+
+        <!-- RETURN HOME -->
+
+        <section class="back-home">
+
+            <a href="Home.html" class="shop-button">
+                Back to Home Page
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         WEBSITE FOOTER
+    ========================== -->
+
+    <footer class="site-footer">
+
+        <h3>JAZ SUPERMARKET</h3>
+
+        <p>Where Quality Meets Affordability!</p>
+
+        <div class="footer-links">
+
+            <a href="Home.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Products.html">Products</a>
+            <a href="Contact.html">Contact</a>
+
+        </div>
+
+        <p>
+            &copy; <span id="year"></span>
+            JAZ Supermarket. All rights reserved.
+        </p>
+<p>BACS/26D/U/A0271</p>
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        // Automatic Copyright Year
+
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+
+        // WhatsApp Feedback Form
+
+        document.getElementById("feedbackForm")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                const name =
+                    document.getElementById("customerName").value;
+
+                const email =
+                    document.getElementById("customerEmail").value;
+
+                const feedback =
+                    document.getElementById("feedback").value;
+
+                const message =
+                    "JAZ SUPERMARKET - CUSTOMER FEEDBACK\n\n" +
+                    "Name: " + name + "\n" +
+                    "Email: " + email + "\n\n" +
+                    "Feedback: " + feedback;
+
+                const whatsappURL =
+                    "https://wa.me/256705807527?text=" +
+                    encodeURIComponent(message);
+
+                window.open(
+                    whatsappURL,
+                    "_blank",
+                    "noopener,noreferrer"
+                );
+
+            });
+
+    </script>
+</body>
+</html>
